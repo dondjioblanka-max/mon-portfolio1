@@ -37,6 +37,44 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+   
+    const nom = document.getElementById('nom').value;
+    const email = document.getElementById('email').value;
+    const telephone = document.getElementById('telephone').value || "Non renseigné";
+    const sujet = document.getElementById('sujet').value;
+    const message = document.getElementById('message').value;
+
+    
+    const votreNumero = "237650783430"; 
+
+   
+    const texteMessage = `Bonjour, je souhaite vous contacter via votre Portfolio.\n\n` +
+                         `*👤 Nom :* ${nom}\n` +
+                         `*📧 Email :* ${email}\n` +
+                         `*📞 Tél :* ${telephone}\n` +
+                         `*📌 Objet :* ${sujet}\n\n` +
+                         `*💬 Message :*\n${message}`;
+
+    
+    const texteEncode = encodeURIComponent(texteMessage);
+
+    
+    const urlWhatsApp = `https://wa.me/${votreNumero}?text=${texteEncode}`;
+    window.open(urlWhatsApp, '_blank');
+});
+
+
+var typed = new Typed(".typing", {
+    strings: ["Un Developpeur Web", "Une Etudiante en Genie Informatique"],
+    typeSpeed: 100,      
+    backSpeed: 60,       
+    backDelay: 1000,     
+    loop: true          
+});
+
 ScrollReveal({ 
     
     distance: '80px',
@@ -48,6 +86,4 @@ ScrollReveal().reveal('.accueil-content, .heading', { origin: 'top'});
 ScrollReveal().reveal('.accueil-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom'});
 ScrollReveal().reveal('.accueil-content h1, .apropos-img', { origin: 'left'});
 ScrollReveal().reveal('.accueil-content p, .apropos-content', { origin: 'right'});
-
-
 
