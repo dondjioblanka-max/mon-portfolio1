@@ -60,11 +60,17 @@ section {
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
-.logo{
+.logo {
     font-size: 2.5rem;
-    color: var(--text-color);
+    color: var(--text-color); 
     font-weight: 600;
     cursor: default;
+    text-decoration: none; 
+}
+
+
+.logo span {
+    color: var(--main-color);
 }
 
 .navbar a {
