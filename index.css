@@ -200,70 +200,61 @@ span {
     
 }
 
-/* ==========================================================================
-   BLOC COMPÉTENCES (Intégré harmonieusement à l'À-propos)
-   ========================================================================== */
-.skills-container {
-    margin-top: 3rem;
-    padding: 2.5rem;
-    background-color: var(--bg-color); /* Utilise le fond foncé général pour ressortir du second-bg */
-    color: var(--text-color);
-    border-radius: 2rem;
-    border: 0.2rem solid rgba(255, 255, 255, 0.05);
+.skills {
+    background: var(--bg-color); /* Fond sombre pour alterner avec le gris de l'à-propos */
 }
 
-.skills-container h2 {
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-    color: var(--text-color);
+.skills h2 {
+    margin-bottom: 5rem; /* Espace sous le grand titre */
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+    max-width: 100rem;
+    margin: 0 auto;
 }
 
 .skills-column h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--main-color); /* Titres des colonnes en Cyan */
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--main-color); /* Titre Hard/Soft en Cyan */
+    text-align: center;
 }
 
 .skill-item {
-    margin-bottom: 1.8rem;
+    margin-bottom: 2.5rem;
 }
 
 .skill-name {
     display: block;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
-/* Le fond de la barre de progression */
 .progress-bar {
     width: 100%;
-    height: 0.8rem;
-    background-color: var(--second-bg-color); /* Fond de la jauge gris */
+    height: 1rem;
+    background-color: var(--second-bg-color);
     border-radius: 4rem;
     overflow: hidden;
 }
 
-/* Le remplissage pour les Hard Skills (Cyan éclatant avec lueur discrète) */
 .progress {
     height: 100%;
-    background-color: var(--main-color); 
+    background-color: var(--main-color);
     border-radius: 4rem;
-    box-shadow: 0 0 0.5rem var(--main-color);
+    box-shadow: 0 0 0.8rem var(--main-color);
     transition: width 1s ease-in-out;
 }
 
-/* Le remplissage pour les Soft Skills (Blanc brillant pour différencier les deux types) */
 .progress.soft {
-    background-color: var(--text-color);
-    box-shadow: 0 0 0.5rem var(--text-color);
+    background-color: var(--text-color); /* Soft skills en blanc */
+    box-shadow: 0 0 0.8rem var(--text-color);
 }
+
 
 .services h2 {
     margin-bottom: 5rem;
